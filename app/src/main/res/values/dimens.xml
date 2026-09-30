@@ -6,4 +6,10 @@
     <dimen name="labelMarginTop">12sp</dimen>
     <dimen name="labelPadding">10sp</dimen>
     <dimen name="labelPaddingETX">12sp</dimen>
+    <dimen name="FRGTitleTextSize">24sp</dimen>
+    <dimen name="FRGLabelTextSize">16sp</dimen>
+    <dimen name="FRGContainerPadding">24dp</dimen>
+    <dimen name="FRGEditTextTextSize">16sp</dimen>
+    <dimen name="FRGTextView2TextSize">14sp</dimen>
+    <dimen name="FRGButtonTextSize">16sp</dimen>
 </resources>
