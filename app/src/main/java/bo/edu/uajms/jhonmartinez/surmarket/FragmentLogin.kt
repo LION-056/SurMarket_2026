@@ -73,6 +73,7 @@ class FragmentLogin : Fragment() {
         var res = true
         if (user.isEmpty()){
             ETX_FRGLogin_UserName.error = getString(R.string.userEmpty)
+            res=false
         }
         else
         {
@@ -80,6 +81,7 @@ class FragmentLogin : Fragment() {
         }
         if (password.isEmpty()){
             ETX_FRGLogin_Password.error = getString(R.string.passwordEmpty)
+            res=false
         }
         else
         {

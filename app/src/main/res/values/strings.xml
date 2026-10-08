@@ -12,4 +12,5 @@
     <string name="loginError">Usuario o Contraseña Invalidos</string>
     <string name="userEmpty">Ingrese su Nombre de Usuario</string>
     <string name="passwordEmpty">Ingrese su Contraseña</string>
+    <string name="labelLoginFragment">Login</string>
 </resources>
