@@ -7,8 +7,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import bo.edu.uajms.jhonmartinez.surmarket.models.product
+import kotlin.Int
+import kotlin.String
 
 class FragmentProductsList : Fragment() {
     private lateinit var IMV_FRGProductsList_ShoppingCat : ImageView
@@ -16,6 +21,10 @@ class FragmentProductsList : Fragment() {
     private lateinit var ETX_FRGProductsList_Search : EditText
     private lateinit var BTN_FRGProductsList_AddProduct : Button
     private lateinit var RCV_FRGProductsList_ProductsList : RecyclerView
+
+    private lateinit var adapterProducts: AdapterProducts
+
+    private var listaProductos = mutableListOf<product>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,6 +38,8 @@ class FragmentProductsList : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initializeViews(view)
         configureListeners()
+        configureRecyclerView()
+        loadSampleProducts()
     }
 
     private fun initializeViews(view: View) {
@@ -41,5 +52,75 @@ class FragmentProductsList : Fragment() {
     }
     private fun configureListeners(){
 
+    }
+    private fun configureRecyclerView(){
+        adapterProducts = AdapterProducts(
+            productsList = listaProductos,
+            clickOnBuy = { product ->
+                Toast.makeText(requireContext(),getString(R.string.addCart)+ "${product.name}",
+                    Toast.LENGTH_SHORT).show()
+            }
+        )
+        RCV_FRGProductsList_ProductsList.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = adapterProducts
+        }
+    }
+    private fun loadSampleProducts(){
+        val productsSample = listOf(
+            product(
+                id= 1,
+                name= "Camisa",
+                category= "Ropa de Varon",
+                price= 100.0,
+                imageUrl= "",
+                description= "Camisa de Varon Tommy Hilfiger",
+                availabel= true,
+                stock= 1
+            ),
+            product(
+                id= 2,
+                name= "Pantalon",
+                category= "Ropa de Varon",
+                price= 210.0,
+                imageUrl= "",
+                description= "Pantalon Jean Azul",
+                availabel= true,
+                stock= 1
+            ),
+            product(
+                id= 3,
+                name= "Polera",
+                category= "Ropa de Varon",
+                price= 160.0,
+                imageUrl= "",
+                description= "Polera Polo Totto Azul",
+                availabel= true,
+                stock= 1
+            ),
+            product(
+                id= 4,
+                name= "Zapatillas",
+                category= "Ropa de Varon",
+                price= 530.0,
+                imageUrl= "",
+                description= "Zpataillas Nike Blancas",
+                availabel= true,
+                stock= 1
+            ),
+            product(
+                id= 5,
+                name= "Zapatos",
+                category= "Ropa de Varon",
+                price= 330.0,
+                imageUrl= "",
+                description= "Zapatos Negros Pagani",
+                availabel= true,
+                stock= 1
+            )
+        )
+        listaProductos.count()
+        listaProductos.addAll(productsSample)
+        adapterProducts.notifyChanged()
     }
 }
