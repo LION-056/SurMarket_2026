@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/FRGContainerPadding">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/TitleHeight"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:id="@+id/IMV_FRGProfile_Back"
+                android:layout_width="@dimen/imageViewIconSize"
+                android:layout_height="@dimen/imageViewIconSize"
+                android:padding="@dimen/imageViewIcon_Padding"
+                android:src="@drawable/ic_flecha" />
+            <TextView
+                android:id="@+id/TXV_FRGProfile_Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Perfil"
+                android:textSize="@dimen/titleTextSize"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/imageViewIconSize" />
+        </LinearLayout><!-- 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/profile_avatar_size"
+                android:layout_height="@dimen/profile_avatar_size"
+                app:cardCornerRadius="@dimen/profile_avatar_radius"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/gray">
+                <ImageView
+                    android:id="@+id/IMV_FRGProfile_Avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/TXV_FRGProfile_UserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario123"
+                android:textSize="@dimen/titleTextSize"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+            <TextView
+                android:id="@+id/TXV_FRGProfile_UserID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID: 456789"
+                android:textSize="@dimen/FRGTextView2TextSize"
+                android:textColor="#888888" />
+        </LinearLayout><!-- 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/FRGContainerPadding"
+            android:layout_marginTop="24dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/profile_row_margin_bottom">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    app:cardCornerRadius="@dimen/profile_icon_bg_radius"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0F4F8">
+                    <ImageView
+                        android:id="@+id/IMV_FRGProfile_EmailIcon"
+                        android:layout_width="@dimen/profile_icon_size"
+                        android:layout_height="@dimen/profile_icon_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_email" />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/profile_text_margin_start">
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_EmailLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/FRGLabelTextSize" />
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_EmailValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="usuario123@email.com"
+                        android:textColor="#888888"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/profile_row_margin_bottom">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    app:cardCornerRadius="@dimen/profile_icon_bg_radius"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0F4F8">
+                    <ImageView
+                        android:id="@+id/IMV_FRGProfile_NameIcon"
+                        android:layout_width="@dimen/profile_icon_size"
+                        android:layout_height="@dimen/profile_icon_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_user" />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/profile_text_margin_start">
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_NameLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre completo"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/FRGLabelTextSize" />
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_NameValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Juan Perez"
+                        android:textColor="#888888"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/profile_row_margin_bottom">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    app:cardCornerRadius="@dimen/profile_icon_bg_radius"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0F4F8">
+                    <ImageView
+                        android:id="@+id/IMV_FRGProfile_PhoneIcon"
+                        android:layout_width="@dimen/profile_icon_size"
+                        android:layout_height="@dimen/profile_icon_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_phone" />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/profile_text_margin_start">
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_PhoneLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/FRGLabelTextSize" />
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_PhoneValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+52 55 1234 5678"
+                        android:textColor="#888888"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/profile_row_margin_bottom">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    app:cardCornerRadius="@dimen/profile_icon_bg_radius"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0F4F8">
+                    <ImageView
+                        android:id="@+id/IMV_FRGProfile_LocationIcon"
+                        android:layout_width="@dimen/profile_icon_size"
+                        android:layout_height="@dimen/profile_icon_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_location" />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/profile_text_margin_start">
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_LocationLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dirección"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/FRGLabelTextSize" />
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_LocationValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Calle Principal 123 Ciudad Estado"
+                        android:textColor="#888888"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/profile_row_margin_bottom">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    app:cardCornerRadius="@dimen/profile_icon_bg_radius"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0F4F8">
+                    <ImageView
+                        android:id="@+id/IMV_FRGProfile_ScheduleIcon"
+                        android:layout_width="@dimen/profile_icon_size"
+                        android:layout_height="@dimen/profile_icon_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_schedule" />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/profile_text_margin_start">
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_ScheduleLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de registro"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/FRGLabelTextSize" />
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_ScheduleValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15 de marzo 2023"
+                        android:textColor="#888888"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/profile_row_margin_bottom">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    app:cardCornerRadius="@dimen/profile_icon_bg_radius"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0F4F8">
+                    <ImageView
+                        android:id="@+id/IMV_FRGProfile_ClockIcon"
+                        android:layout_width="@dimen/profile_icon_size"
+                        android:layout_height="@dimen/profile_icon_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_clock" />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/profile_text_margin_start">
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_ClockLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Último acceso"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/FRGLabelTextSize" />
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_ClockValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20 de mayo de 2024, 10:30 AM"
+                        android:textColor="#888888"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/profile_row_margin_bottom">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    app:cardCornerRadius="@dimen/profile_icon_bg_radius"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0F4F8">
+                    <ImageView
+                        android:id="@+id/IMV_FRGProfile_GroupsIcon"
+                        android:layout_width="@dimen/profile_icon_size"
+                        android:layout_height="@dimen/profile_icon_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_user_groups" />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/profile_text_margin_start">
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_GroupsLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grupos"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/FRGLabelTextSize" />
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_GroupsValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Administradores, Usuarios"
+                        android:textColor="#888888"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/profile_row_margin_bottom">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    app:cardCornerRadius="@dimen/profile_icon_bg_radius"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0F4F8">
+                    <ImageView
+                        android:id="@+id/IMV_FRGProfile_KeyIcon"
+                        android:layout_width="@dimen/profile_icon_size"
+                        android:layout_height="@dimen/profile_icon_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_key" />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/profile_text_margin_start">
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_KeyLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Permisos"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/FRGLabelTextSize" />
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_KeyValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Leer, Escribir, Eliminar"
+                        android:textColor="#888888"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout><!-- 4 -->
+        <Button
+            android:id="@+id/BTN_FRGProfile_ChangePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/FRGContainerPadding"
+            android:layout_marginTop="16dp"
+            android:text="Cambiar contraseña"
+            android:textAllCaps="false"
+            android:textColor="#333333"
+            android:backgroundTint="#F0F4F8" />
+    </LinearLayout>
+</ScrollView>

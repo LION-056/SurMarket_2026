@@ -45,4 +45,6 @@
     <string name="FRGAddProduct_BTNAddProduct">Añadir Producto</string>
     <string name="addProduct">Añadir Nuevo Producto</string>
     <string name="labelAddProductFragment">Añadir Producto</string>
+    <string name="FRGProfile_Title">Perfil</string>
+    <string name="profile">Perfil</string>
 </resources>
