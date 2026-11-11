@@ -37,7 +37,7 @@
     <dimen name="profile_avatar_size">76dp</dimen>
     <dimen name="profile_avatar_radius">38dp</dimen>
     <dimen name="profile_icon_bg_size">32dp</dimen>
-    <dimen name="profile_icon_bg_radius">8/dp</dimen>
+    <dimen name="profile_icon_bg_radius">8dp</dimen>
     <dimen name="profile_icon_size">16dp</dimen>
     <dimen name="profile_row_margin_bottom">6dp</dimen>
     <dimen name="profile_text_margin_start">12dp</dimen>
