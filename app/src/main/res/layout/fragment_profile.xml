@@ -29,7 +29,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Perfil"
+                android:text="@string/FRGProfile_Title"
                 android:textSize="@dimen/titleTextSize"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -42,15 +42,15 @@
             android:gravity="center_horizontal"
             android:layout_marginTop="16dp">
             <androidx.cardview.widget.CardView
+                android:id="@+id/CRV_FRGProfile_Image"
                 android:layout_width="@dimen/profile_avatar_size"
                 android:layout_height="@dimen/profile_avatar_size"
-                app:cardCornerRadius="@dimen/profile_avatar_radius"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="@color/gray">
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="100dp">
                 <ImageView
-                    android:id="@+id/IMV_FRGProfile_Avatar"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:id="@+id/IMV_FRGProfile_Profile"
+                    android:layout_width="@dimen/profile_avatar_size"
+                    android:layout_height="@dimen/profile_avatar_size"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_profile" />
             </androidx.cardview.widget.CardView>
@@ -58,17 +58,16 @@
                 android:id="@+id/TXV_FRGProfile_UserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Usuario123"
+                android:text="@string/FRGProfile_Text"
                 android:textSize="@dimen/titleTextSize"
                 android:textStyle="bold"
                 android:layout_marginTop="12dp" />
             <TextView
-                android:id="@+id/TXV_FRGProfile_UserID"
+                android:id="@+id/TXV_FRGProfile_ID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ID: 456789"
-                android:textSize="@dimen/FRGTextView2TextSize"
-                android:textColor="#888888" />
+                android:text="@string/FRGProfile_Text_ID"
+                android:textSize="@dimen/FRGTextView2TextSize" />
         </LinearLayout><!-- 3 -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,18 +101,18 @@
                     android:orientation="vertical"
                     android:layout_marginStart="@dimen/profile_text_margin_start">
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_EmailLabel"
+                        android:id="@+id/TXV_FRGProfile_Email_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Email"
+                        android:text="@string/FRGProfile_Text_Email"
                         android:textStyle="bold"
-                        android:textSize="@dimen/FRGLabelTextSize" />
+                        android:textSize="@dimen/FRGLabelTextSize"
+                        android:textColor="@color/black"/>
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_EmailValue"
+                        android:id="@+id/TXV_FRGProfile_Email"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="usuario123@email.com"
-                        android:textColor="#888888"
+                        android:text="@string/FRGProfile_Text_EmailX"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -143,18 +142,18 @@
                     android:orientation="vertical"
                     android:layout_marginStart="@dimen/profile_text_margin_start">
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_NameLabel"
+                        android:id="@+id/TXV_FRGProfile_Name_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nombre completo"
                         android:textStyle="bold"
-                        android:textSize="@dimen/FRGLabelTextSize" />
+                        android:textSize="@dimen/FRGLabelTextSize"
+                        android:textColor="@color/black" />
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_NameValue"
+                        android:id="@+id/TXV_FRGProfile_Name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Juan Perez"
-                        android:textColor="#888888"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -184,18 +183,18 @@
                     android:orientation="vertical"
                     android:layout_marginStart="@dimen/profile_text_margin_start">
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_PhoneLabel"
+                        android:id="@+id/TXV_FRGProfile_Phone_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Teléfono"
                         android:textStyle="bold"
-                        android:textSize="@dimen/FRGLabelTextSize" />
+                        android:textSize="@dimen/FRGLabelTextSize"
+                        android:textColor="@color/black" />
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_PhoneValue"
+                        android:id="@+id/TXV_FRGProfile_Phone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="+52 55 1234 5678"
-                        android:textColor="#888888"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -225,18 +224,18 @@
                     android:orientation="vertical"
                     android:layout_marginStart="@dimen/profile_text_margin_start">
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_LocationLabel"
+                        android:id="@+id/TXV_FRGProfile_Address_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Dirección"
                         android:textStyle="bold"
-                        android:textSize="@dimen/FRGLabelTextSize" />
+                        android:textSize="@dimen/FRGLabelTextSize"
+                        android:textColor="@color/black" />
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_LocationValue"
+                        android:id="@+id/TXV_FRGProfile_Address"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Calle Principal 123 Ciudad Estado"
-                        android:textColor="#888888"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -266,18 +265,18 @@
                     android:orientation="vertical"
                     android:layout_marginStart="@dimen/profile_text_margin_start">
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_ScheduleLabel"
+                        android:id="@+id/TXV_FRGProfile_EntryDate_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Fecha de registro"
                         android:textStyle="bold"
-                        android:textSize="@dimen/FRGLabelTextSize" />
+                        android:textSize="@dimen/FRGLabelTextSize"
+                        android:textColor="@color/black" />
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_ScheduleValue"
+                        android:id="@+id/TXV_FRGProfile_EntryDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="15 de marzo 2023"
-                        android:textColor="#888888"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -307,18 +306,18 @@
                     android:orientation="vertical"
                     android:layout_marginStart="@dimen/profile_text_margin_start">
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_ClockLabel"
+                        android:id="@+id/TXV_FRGProfile_LastAccess_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Último acceso"
                         android:textStyle="bold"
-                        android:textSize="@dimen/FRGLabelTextSize" />
+                        android:textSize="@dimen/FRGLabelTextSize"
+                        android:textColor="@color/black" />
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_ClockValue"
+                        android:id="@+id/TXV_FRGProfile_LastAccess"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="20 de mayo de 2024, 10:30 AM"
-                        android:textColor="#888888"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -348,18 +347,18 @@
                     android:orientation="vertical"
                     android:layout_marginStart="@dimen/profile_text_margin_start">
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_GroupsLabel"
+                        android:id="@+id/TXV_FRGProfile_Groups_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Grupos"
                         android:textStyle="bold"
-                        android:textSize="@dimen/FRGLabelTextSize" />
+                        android:textSize="@dimen/FRGLabelTextSize"
+                        android:textColor="@color/black" />
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_GroupsValue"
+                        android:id="@+id/TXV_FRGProfile_Groups"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Administradores, Usuarios"
-                        android:textColor="#888888"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -389,18 +388,18 @@
                     android:orientation="vertical"
                     android:layout_marginStart="@dimen/profile_text_margin_start">
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_KeyLabel"
+                        android:id="@+id/TXV_FRGProfile_Permissions_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Permisos"
                         android:textStyle="bold"
-                        android:textSize="@dimen/FRGLabelTextSize" />
+                        android:textSize="@dimen/FRGLabelTextSize"
+                        android:textColor="@color/black" />
                     <TextView
-                        android:id="@+id/TXV_FRGProfile_KeyValue"
+                        android:id="@+id/TXV_FRGProfile_Permissions"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Leer, Escribir, Eliminar"
-                        android:textColor="#888888"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
