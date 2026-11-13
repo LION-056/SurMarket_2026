@@ -145,7 +145,7 @@
                         android:id="@+id/TXV_FRGProfile_Name_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nombre completo"
+                        android:text="@string/FRGProfile_Text_Name"
                         android:textStyle="bold"
                         android:textSize="@dimen/FRGLabelTextSize"
                         android:textColor="@color/black" />
@@ -153,7 +153,7 @@
                         android:id="@+id/TXV_FRGProfile_Name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Juan Perez"
+                        android:text="@string/FRGProfile_Text_NameX"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -186,7 +186,7 @@
                         android:id="@+id/TXV_FRGProfile_Phone_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Teléfono"
+                        android:text="@string/FRGProfile_Text_Phone"
                         android:textStyle="bold"
                         android:textSize="@dimen/FRGLabelTextSize"
                         android:textColor="@color/black" />
@@ -194,7 +194,7 @@
                         android:id="@+id/TXV_FRGProfile_Phone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+52 55 1234 5678"
+                        android:text="@string/FRGProfile_Text_PhoneX"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -227,7 +227,7 @@
                         android:id="@+id/TXV_FRGProfile_Address_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dirección"
+                        android:text="@string/FRGProfile_Text_Address"
                         android:textStyle="bold"
                         android:textSize="@dimen/FRGLabelTextSize"
                         android:textColor="@color/black" />
@@ -235,7 +235,7 @@
                         android:id="@+id/TXV_FRGProfile_Address"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Calle Principal 123 Ciudad Estado"
+                        android:text="@string/FRGProfile_Text_AddressX"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -268,7 +268,7 @@
                         android:id="@+id/TXV_FRGProfile_EntryDate_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Fecha de registro"
+                        android:text="@string/FRGProfile_Text_Date"
                         android:textStyle="bold"
                         android:textSize="@dimen/FRGLabelTextSize"
                         android:textColor="@color/black" />
@@ -276,7 +276,7 @@
                         android:id="@+id/TXV_FRGProfile_EntryDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15 de marzo 2023"
+                        android:text="@string/FRGProfile_Text_DateX"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -309,7 +309,7 @@
                         android:id="@+id/TXV_FRGProfile_LastAccess_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Último acceso"
+                        android:text="@string/FRGProfile_Text_LastAccess"
                         android:textStyle="bold"
                         android:textSize="@dimen/FRGLabelTextSize"
                         android:textColor="@color/black" />
@@ -317,7 +317,7 @@
                         android:id="@+id/TXV_FRGProfile_LastAccess"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20 de mayo de 2024, 10:30 AM"
+                        android:text="@string/FRGProfile_Text_LastAccessX"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -350,7 +350,7 @@
                         android:id="@+id/TXV_FRGProfile_Groups_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Grupos"
+                        android:text="@string/FRGProfile_Text_Groups"
                         android:textStyle="bold"
                         android:textSize="@dimen/FRGLabelTextSize"
                         android:textColor="@color/black" />
@@ -358,7 +358,7 @@
                         android:id="@+id/TXV_FRGProfile_Groups"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Administradores, Usuarios"
+                        android:text="@string/FRGProfile_Text_GroupsX"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -391,7 +391,7 @@
                         android:id="@+id/TXV_FRGProfile_Permissions_Label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Permisos"
+                        android:text="@string/FRGProfile_Text_Permissions"
                         android:textStyle="bold"
                         android:textSize="@dimen/FRGLabelTextSize"
                         android:textColor="@color/black" />
@@ -399,7 +399,7 @@
                         android:id="@+id/TXV_FRGProfile_Permissions"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Leer, Escribir, Eliminar"
+                        android:text="@string/FRGProfile_Text_PermissionsX"
                         android:textSize="@dimen/FRGTextView2TextSize" />
                 </LinearLayout>
             </LinearLayout>
@@ -411,7 +411,7 @@
             android:layout_gravity="end"
             android:layout_marginEnd="@dimen/FRGContainerPadding"
             android:layout_marginTop="16dp"
-            android:text="Cambiar contraseña"
+            android:text="@string/FRGProfile_BTNChangePassword"
             android:textAllCaps="false"
             android:textColor="#333333"
             android:backgroundTint="#F0F4F8" />
